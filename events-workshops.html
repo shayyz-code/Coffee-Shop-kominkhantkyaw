@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="MMM.css">
+    <title>Coffee Shop</title>
+</head>
+
+<body>
+
+    <!-- ==================HEADER&NAV======================= -->
+    <header class="header">
+        <div class="container split">
+            <a href="#home">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </a>
+
+            <nav id="nav" class="nav">
+                <ul class="nav-list row">
+                    <li class="nav-link"><a href="home.html">Home</a></li>
+                    <li class="nav-link"><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li class="nav-link"><a href="brewing-equipment.html">Brewing Equipment</a></li>
+                    <li class="nav-link"><a href="events-workshops.html">Events & Workshops</a></li>
+                    <li class="nav-link"><a href="contact us.html">Contact us</a></li>
+                    <li class="nav-link"><a href="special-offers.html">Special Offers</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <i id="search-btn" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                <i id="cart-shopping" class="fa-regular fa-cart-shopping"></i>
+                <i id="open-btn" class="fa-solid fa-bars"></i>
+            </div>
+            
+         
+                <label class="search_inp">
+                    <input type="search" class="search_bar" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+
+                <div class="shopping-cart">
+                    <div class="items">
+                        <h2>You haven't Any Item</h2>
+                    </div>
+
+                    <button class="btn check-items">Checkout Now</button>
+                </div>
+   
+        </div>
+    </header>
+
+    <!-- ==================OUR BLOGS======================= -->
+    <section class="section blogs" id="blogs">
+        <div class="container">
+            <h1 class="sect-head text-center">
+                our <span>blogs</span>
+            </h1>
+
+            <div class="grid cards blog-cards">
+                <div class="card">
+                    <img src="images/blog-1.jpg"
+                         alt="blog-1" class="blog-img">
+                    <div class="blog-content">
+                        <h1 class="content-head">Coffee Origins & Roasting Basics</h1>
+                        <p class="content-date">By Admin / 28.5.2022</p>
+                        <p class="content-description">Understanding where coffee comes from (origin) and how it is roasted helps you appreciate the wide spectrum of flavors available. From bright, citrusy Ethiopian beans roasted light to bring out floral notes, to bold, dark-roasted Sumatran coffees with chocolate and spice undertones the possibilities are endless</p>
+                        <button class="btn blog-btn">Read More</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/blog-2.jpg"
+                         alt="blog-1" class="blog-img">
+                    <div class="blog-content">
+                        <h1 class="content-head"> Hands-On Brewing Techniques</h1>
+                        <p class="content-date">By Admin / 8.8.2022</p>
+                        <p class="content-description">By exploring various brewing techniques and learning how to control essential brewing variables, coffee enthusiasts can elevate their home brewing game. Attendees leave with practical skills and a deeper understanding of how to unlock a coffee is full potential, no matter which method they choose.</p>
+                        <button class="btn blog-btn">Read More</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/blog-3.jpg"
+                         alt="blog-1" class="blog-img">
+                    <div class="blog-content">
+                        <h1 class="content-head">Advanced Espresso & Latte Art</h1>
+                        <p class="content-date">By Admin / 22.10.2022</p>
+                        <p class="content-description">Mastering advanced espresso extraction and latte art elevates the coffee experience, showcasing both craftsmanship and creativity. Through proper technique, attention to detail, and a dash of artistry, baristas (and dedicated home enthusiasts) can consistently serve delicious, visually appealing espresso-based drinks.</p>
+                        <button class="btn blog-btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================FOOTER======================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-stickers">
+                <ul class="stickers">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                    </li>
+                </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
