@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="MMM.css">
     <title>Coffee Shop</title>
+    <script src="https://kit.fontawesome.com/eea93aed3e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,12 +21,16 @@
 
             <nav id="nav" class="nav">
                 <ul class="nav-list row">
-                    <li class="nav-link"><a href="home.html">Home</a></li>
-                    <li class="nav-link"><a href="coffee-selection.html">Coffee Selection</a></li>
-                    <li class="nav-link"><a href="brewing-equipment.html">Brewing Equipment</a></li>
-                    <li class="nav-link"><a href="events-workshops.html">Events & Workshops</a></li>
-                    <li class="nav-link"><a href="contact us.html">Contact us</a></li>
-                    <li class="nav-link"><a href="special-offers.html">Special Offers</a></li>
+                    <li class="nav-link"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="nav-link dropdown"><a><i class="fa-solid fa-chevron-down"></i> Menu</a>
+                    <ul class="dropdown-content">
+                        <li class="nav-link"><a href="coffee-selection.html">Coffee Selection</a></li>
+                        <li class="nav-link"><a href="brewing-equipment.html">Brewing Equipment</a></li>
+                    </ul></li>
+                    
+                    <li class="nav-link"><a href="events-workshops.html"><i class="fa-solid fa-calendar"></i> Events & Workshops</a></li>
+                    <li class="nav-link"><a href="contact us.html"><i class="fa-solid fa-phone"></i> Contact us</a></li>
+                    <li class="nav-link"><a href="special-offers.html"><i class="fa-solid fa-gift"></i> Special Offers</a></li>
                 </ul>
             </nav>
 
@@ -46,11 +48,11 @@
 
                 <div class="shopping-cart">
                     <div class="items">
-                        <h2>You haven't Any Item</h2>
+                      <h2>You haven't added any item</h2>
                     </div>
-
+                    <p>Total: $<span id="cost"></span></p>
                     <button class="btn check-items">Checkout Now</button>
-                </div>
+                  </div>
    
         </div>
     </header>
@@ -75,43 +77,8 @@
             <h1 class="text-center sect-head">
                 our <span>menu</span>
             </h1>
-            <div class="grid cards">
-                <div class="card text-center">
-                    <img src="images/menu-1.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="card text-center">
-                    <img src="images/menu-2.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="card text-center">
-                    <img src="images/menu-3.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="card text-center">
-                    <img src="images/menu-4.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="card text-center">
-                    <img src="images/menu-5.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
-                <div class="card text-center">
-                    <img src="images/menu-6.png" alt="" class="card-img">
-                    <h4>Tasy And Healty</h4>
-                    <p>$15.99 <del>$20.99</del></p>
-                    <button class="btn">Add to Cart</button>
-                </div>
+            <div id="menuDiv" class="grid cards">
+                
             </div>
         </div>
     </section>
