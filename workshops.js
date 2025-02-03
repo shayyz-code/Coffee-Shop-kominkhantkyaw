@@ -66,13 +66,13 @@ function closeModal() {
 
 function openModal(workshop) {
   modal.innerHTML = `
-        <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+        <i class="fa-solid fa-xmark pointer" onclick="closeModal()"></i>
         <h2>Register</h2>
         <p>${workshop.name}</p>
         <input id="input-firstname" type="text" placeholder="First Name" required />
         <input id="input-lastname" type="text" placeholder="Last Name" required />
         <input id="input-email" type="email" placeholder="Email" required />
-        <button type="submit">Register</button>
+        <button class="btn" type="submit">Register</button>
     `
   document.body.appendChild(modal)
 

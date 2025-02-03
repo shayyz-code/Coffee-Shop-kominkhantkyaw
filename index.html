@@ -56,22 +56,29 @@
         </nav>
 
         <div class="header-icons">
-          <i id="search-btn" class="fa-sharp fa-solid fa-magnifying-glass"></i>
+          <i id="account" class="fa-solid fa-user dropdown"
+            ><ul class="dropdown-content dropdown-content-account">
+              <li class="nav-link">
+                <a onclick="openUser('login')">Log In</a>
+              </li>
+              <li class="nav-link">
+                <a onclick="openUser('signup')">Sign Up</a>
+              </li>
+            </ul></i
+          >
+
           <i id="cart-shopping" class="fa-regular fa-cart-shopping"></i>
           <i id="open-btn" class="fa-solid fa-bars"></i>
         </div>
-
-        <label class="search_inp">
-          <input type="search" class="search_bar" placeholder="Search..." />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </label>
 
         <div class="shopping-cart">
           <div class="items">
             <h2>You haven't added any item</h2>
           </div>
-          <p>Total: $<span id="cost"></span></p>
-          <button class="btn check-items">Checkout Now</button>
+          <div class="shop-cost">Total: $<span id="cost"></span></div>
+          <button class="btn check-items" onclick="checkout()">
+            Checkout Now
+          </button>
         </div>
       </div>
     </header>
@@ -81,16 +88,37 @@
       <div class="container">
         <div class="main-text">
           <h1>fresh coffee in the morning</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quasi
-            ad doloribus mollitia magnam molestias?
-          </p>
-          <button class="btn">Get Yours Now</button>
+          <p>The Best Coffee Shop in the Neighbourhood.</p>
+          <button class="btn" onclick="openUser('signup')">Sign Up</button>
         </div>
       </div>
     </div>
 
     <!-- ==================ABOUT SECTION======================= -->
+    <section class="section customers" id="about">
+      <div class="container">
+        <h1 class="text-center sect-head"><span>Memories with</span> us</h1>
+        <div class="row">
+          <div class="slideshow">
+            <img
+              src="images/slide-1.jpg"
+              alt="about-img"
+              class="about-img col-50"
+            />
+            <img
+              src="images/slide-2.jpg"
+              alt="about-img"
+              class="about-img col-50"
+            />
+            <img
+              src="images/slide-3.jpg"
+              alt="about-img"
+              class="about-img col-50"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section about" id="about">
       <div class="container">
@@ -104,17 +132,15 @@
           <div class="about-content col-48">
             <h2>What Makes Our Coffee Special?</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              laudantium quasi quibusdam atque perspiciatis placeat, sit labore
-              dicta odio dolores reprehenderit eos nam modi at, neque inventore,
-              ratione numquam voluptas! Reprehenderit.
+              At Bean Boutique Cafe, every cup tells a story of quality,
+              craftsmanship, and passion. We source the finest ethically grown
+              beans, roast them to perfection, and serve them fresh for an
+              unforgettable coffee experience. Our blends are expertly crafted
+              to bring out rich, bold flavors—whether you prefer a smooth latte,
+              a robust espresso, or a refreshing cold brew. With a commitment to
+              sustainability and a cozy, boutique atmosphere, we create more
+              than just coffee—we create moments worth savoring. ☕✨
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
-              amet corrupti placeat quasi facilis atque eos enim, vitae iusto
-              quibusdam?
-            </p>
-            <button class="btn">Learn More</button>
           </div>
         </div>
       </div>
@@ -157,5 +183,7 @@
     </footer>
 
     <script src="app.js"></script>
+    <script src="modal.js"></script>
+    <script src="slideshow.js"></script>
   </body>
 </html>

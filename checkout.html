@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Out</title>
     <link rel="stylesheet" href="MMM.css" />
-    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="checkout.css" />
     <script
       src="https://kit.fontawesome.com/eea93aed3e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="jquery-3.7.1.min.js" crossorigin="anonymous"></script>
   </head>
-
   <body>
-    <!-- ==================HEADER&NAV======================= -->
     <header class="header">
       <div class="container split">
         <a href="index.html">
@@ -76,45 +75,100 @@
             <h2>You haven't added any item</h2>
           </div>
           <div class="shop-cost">Total: $<span id="cost"></span></div>
-          <button class="btn check-items">Checkout Now</button>
+          <button class="btn check-items" onclick="checkout()">
+            Checkout Now
+          </button>
         </div>
       </div>
     </header>
-
-    <!-- ==================OUR MENU SECTION======================= -->
-    <section class="section menu" id="menu">
-      <div class="container">
-        <h1 class="text-center sect-head">our <span>menu</span></h1>
-        <div class="search_inp">
+    <main>
+      <h1>Checkout</h1>
+      <ul>
+        <h2>Order Summary</h2>
+        <li>Subtotal: <span id="subtotal">$</span></li>
+        <li>Discount: <span id="discount">$</span></li>
+        <li>Total: <span id="total">$</span></li>
+      </ul>
+      <form>
+        <div>
+          <label for="fullname">Full Name</label>
           <input
-            id="input-search"
-            type="search"
-            class="search_bar"
-            placeholder="Search..."
-            oninput="validInput()"
+            type="text"
+            name="fullname"
+            id="fullname"
+            placeholder="Full Name"
+            required
           />
-          <i class="fa-solid fa-magnifying-glass" onclick="search()"></i>
         </div>
-        <div id="menuDiv" class="grid cards"></div>
-      </div>
-    </section>
 
-    <!-- ==================LATEST PRODUCTS SECTION================== -->
-    <section class="section products" id="products">
-      <div class="container">
-        <h1 class="text-center sect-head">latest <span>products</span></h1>
+        <div>
+          <label for="shipping-address">Shipping Address</label>
+          <textarea
+            type="text"
+            name="shipping-address"
+            id="shipping-address"
+            placeholder="Shipping Address"
+            required
+          ></textarea>
+        </div>
 
-        <div class="grid cards product-cards" id="product-cards"></div>
-      </div>
-    </section>
+        <div>
+          <label for="mobile-number">Mobile Number</label>
+          <input
+            type="tel"
+            name="mobile-number"
+            id="mobile-number"
+            placeholder="Mobile Number"
+            required
+          />
+        </div>
 
-    <!-- ==================CUSTOMER'S REVIEW SECTION======================= -->
+        <div>
+          <label for="card-holder">Card Holder's Name</label>
+          <input
+            type="text"
+            name="card-holder"
+            id="card-holder"
+            placeholder="Card Holder's Name"
+            required
+          />
+        </div>
+        <div>
+          <label for="card-number">Card Number</label>
+          <input
+            type="number"
+            name="card-number"
+            id="card-number"
+            placeholder="Card Number"
+            required
+          />
+        </div>
+        <div class="card">
+          <div>
+            <label for="cvv">CVV</label>
+            <input
+              type="number"
+              name="cvv"
+              id="cvv"
+              placeholder="CVV"
+              required
+            />
+          </div>
+          <div>
+            <label for="expiry-date">Expiry Date</label>
+            <input
+              type="date"
+              name="expiry-date"
+              id="expiry-date"
+              placeholder="Expiry Date"
+              required
+            />
+          </div>
+        </div>
 
-    <!-- ==================CONTACT US SECTİON======================= -->
-
-    <!-- ==================OUR BLOGS======================= -->
-
-    <!-- ==================FOOTER======================= -->
+        <button class="btn" type="submit">Confirm Payment</button>
+      </form>
+    </main>
     <footer class="footer">
       <div class="container">
         <div class="social-stickers">
@@ -139,9 +193,8 @@
         <p>&copy; 2025 Bean Boutique Cafe</p>
       </div>
     </footer>
-
     <script src="app.js"></script>
     <script src="modal.js"></script>
-    <script src="search.js"></script>
+    <script src="checkout.js"></script>
   </body>
 </html>

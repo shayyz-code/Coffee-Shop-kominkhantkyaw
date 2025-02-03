@@ -2,39 +2,28 @@ const nav = document.getElementById("nav")
 const openBtn = document.getElementById("open-btn")
 
 openBtn.addEventListener("click", () => {
-  render(searchInp, shoppingCart)
+  render(shoppingCart)
   nav.classList.toggle("open-menu")
   // searchInp.classList.remove('open-search_inp');
 })
 
-// ===========SEARCH_BAR & SHOPPING-CART===========
+// ===========SHOPPING-CART===========
 
-const searchBtn = document.getElementById("search-btn")
-const searchInp = document.querySelector(".search_inp")
 const shoppingCart = document.querySelector(".shopping-cart")
 const cartBtn = document.getElementById("cart-shopping")
 
-searchBtn.addEventListener("click", () => {
-  render(nav, shoppingCart)
-  searchInp.classList.toggle("open-search_inp")
-  // nav.classList.remove('open-menu');
-})
-
 cartBtn.addEventListener("click", () => {
-  render(searchInp, nav)
+  render(nav)
   shoppingCart.classList.toggle("card-active")
 })
 
-function render(a, b) {
-  a.classList.remove("open-menu")
+function render(b) {
   b.classList.remove("open-menu")
-  a.classList.remove("open-search_inp")
   b.classList.remove("card-active")
 }
 
 // ==============ONSCROLL================
 window.onscroll = () => {
-  searchInp.classList.remove("open-search_inp")
   shoppingCart.classList.remove("card-active")
   nav.classList.remove("open-menu")
 }
@@ -45,21 +34,21 @@ let shop = document.getElementById("product-cards")
 
 let product_items = [
   {
-    id: 1,
+    id: 13,
     img: "images/product-1.png",
     name: "Nicaragua - Fresh Coffee",
     price: 15.99,
     sale: 20.99,
   },
   {
-    id: 2,
+    id: 14,
     img: "images/product-2.png",
     name: "Columbia - Strong Coffee",
     price: 20.99,
     sale: 25.99,
   },
   {
-    id: 3,
+    id: 15,
     img: "images/product-3.png",
     name: "Peru - Normal Coffee",
     price: 18.99,
@@ -71,54 +60,89 @@ let coffees = [
   {
     id: 1,
     img: "images/menu-1.png",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    name: "Espresso Delight",
+    price: 14.99,
+    sale: 18.99,
   },
   {
     id: 2,
-    img: "images/menu-1.png",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    img: "images/menu-2.png",
+    name: "Caramel Bliss",
+    price: 15.99,
+    sale: 19.99,
   },
   {
     id: 3,
-    img: "images/menu-2.png",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    img: "images/menu-3.png",
+    name: "Vanilla Cream",
+    price: 16.49,
+    sale: 20.49,
   },
   {
     id: 4,
-    img: "images/menu-1.png",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    img: "images/menu-4.png",
+    name: "Hazelnut Harmony",
+    price: 17.49,
+    sale: 21.49,
+  },
+  {
+    id: 5,
+    img: "images/menu-5.png",
+    name: "Mocha Supreme",
+    price: 18.49,
+    sale: 22.49,
+  },
+  {
+    id: 6,
+    img: "images/menu-6.png",
+    name: "Classic Brew",
+    price: 13.99,
+    sale: 17.99,
   },
 ]
 
 let equipments = [
   {
-    id: 1,
-    img: "images/e.jpg",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    id: 7,
+    img: "images/g.png",
+    name: "Traditional French Press",
+    price: 64.99,
+    sale: 79.99,
   },
   {
-    id: 2,
-    img: "images/f.jpg",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    id: 8,
+    img: "images/f.png",
+    name: "Advanced Brewing Machine",
+    price: 79.99,
+    sale: 99.99,
   },
   {
-    id: 3,
-    img: "images/g.jpg",
-    name: "Tasy And Healty",
-    price: 20.99,
-    sale: 15.99,
+    id: 9,
+    img: "images/e.png",
+    name: "Premium French Press",
+    price: 29.99,
+    sale: 39.99,
+  },
+  {
+    id: 10,
+    img: "images/h.png",
+    name: "Smart Espresso Machine",
+    price: 119.99,
+    sale: 149.99,
+  },
+  {
+    id: 11,
+    img: "images/i.png",
+    name: "Milk Frother",
+    price: 17.99,
+    sale: 24.99,
+  },
+  {
+    id: 12,
+    img: "images/j.png",
+    name: "Coffee Grinder",
+    price: 34.99,
+    sale: 49.99,
   },
 ]
 
@@ -146,13 +170,8 @@ if (lastPath === "coffee-selection.html") {
         let { id, img, name, price, sale } = item
         return `
                     <div class="card text-center" id='product-item-${id}'>
-                        <div id=${id} class="product-btns">
-                            <button onclick="sendCard(${id})" class="sebet"><i class="fa-solid fa-cart-shopping"></i></button>
-                            <button class="heart"><i class="fa-solid fa-heart"></i></button>
-                            <button class="eye"><i class="fa-solid fa-eye"></i></button>
-                        </div>
                         <img src=${img} 
-                        alt='product- ${id}' class="card-img" id='img-${id}'>
+                        alt='product- ${id}' class="card-img card-brew-img" id='img-${id}'>
                         <h4>${name}</h4>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
@@ -162,6 +181,9 @@ if (lastPath === "coffee-selection.html") {
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
                         <p>$${price} <del>$${sale}</del></p>
+                        <div id=${id} class="product-btns">
+                            <button onclick="sendCard(${id})" class="sebet"><i class="fa-solid fa-cart-shopping"></i></button>
+                        </div>
                     </div>
         `
       })
@@ -174,7 +196,7 @@ if (lastPath === "coffee-selection.html") {
     .map(
       (item) => `
         <div class="card text-center">
-            <img src="${item.img}" alt="" class="card-img">
+            <img src="${item.img}" alt="" class="card-brew-img">
             <h4>${item.name}</h4>
             <p>$${item.price} <del>$${item.sale}</del></p>
             <button class="btn" onclick="sendCard(${item.id}, 'equipments')">Add to Cart</button>
@@ -191,9 +213,7 @@ let shopCart = document.querySelector(".shopping-cart")
 
 shopCart.querySelector(".check-items").onclick = () => {
   if (getStorage().length > 0) {
-    alert("You have successfully purchased.")
-    clearStorage()
-    renderCart()
+    checkoutNow()
   } else {
     alert("Please add an item to cart.")
   }
@@ -219,29 +239,39 @@ function createList(myShopArr) {
   let cost = 0
   myShopArr
     .map((item) => {
-      let { id, img, name, price } = item
-      cost += price
+      let { id, img, name, price, quantity } = item
+      cost += price * quantity
       listItems += `
                      <div id='${id}' class="shop-card">
                          <div class="prod-item">
                                  <img src=${img} alt="cart-1">
                                  <div class="item-desc">
                                      <h3>${name}</h3>
-                                     <p>$${price}</p>
+                                     <div class="flex">
+                                        <div>
+                                          <button class="btn icon-btn" onclick="plus(${id})"><i class="fa-solid fa-plus"></i></button>
+                                          <button class="btn icon-btn" onclick="minus(${id})"><i class="fa-solid fa-minus"></i></button>
+                                        </div>
+                                        <span>$${price} x ${quantity}</span>
+                                     </div>
                                  </div>
                          </div>
                          <div onclick="deleteItem(${id})" class="close-btn">
                                  <i class="fa-solid fa-xmark"></i>
                          </div>
                      </div>
-    
             `
     })
     .join("")
   shopCart.querySelector(".items").innerHTML = listItems
-  shopCart.querySelector("#cost").textContent = cost
+  shopCart.querySelector("#cost").textContent = cost.toFixed(2)
+  // For Checkout
+  sessionStorage.setItem("checkout", JSON.stringify({ total: cost }))
 }
 
+function checkoutNow() {
+  window.location.href = "checkout.html"
+}
 // Add to LocalStorage Onclick button
 function sendCard(id, kind) {
   const products =
@@ -250,7 +280,9 @@ function sendCard(id, kind) {
       : kind === "equipments"
       ? equipments
       : product_items
-  let selected = products[id - 1]
+  let selected = products.find((product) => product.id === id)
+
+  selected.quantity = 1
   localStorage.setItem("myShopArr", JSON.stringify([...getStorage(), selected]))
   renderCart()
 }
@@ -261,6 +293,30 @@ function deleteItem(id) {
   const newItems = getStorage().filter((x) => x.id != selectedItem.id)
   localStorage.setItem("myShopArr", JSON.stringify(newItems))
   renderCart()
+}
+
+function plus(id) {
+  const item = getStorage().find((item) => item.id === id)
+  item.quantity++
+  localStorage.setItem(
+    "myShopArr",
+    JSON.stringify([...getStorage().filter((x) => x.id != id), item])
+  )
+  renderCart()
+}
+
+function minus(id) {
+  const item = getStorage().find((item) => item.id === id)
+  item.quantity--
+  if (item.quantity == 0) {
+    deleteItem(id)
+  } else {
+    localStorage.setItem(
+      "myShopArr",
+      JSON.stringify([...getStorage().filter((x) => x.id != id), item])
+    )
+    renderCart()
+  }
 }
 
 // sendCard();

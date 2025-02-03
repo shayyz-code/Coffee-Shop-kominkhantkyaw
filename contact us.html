@@ -1,147 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="MMM.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="MMM.css" />
     <title>Coffee Shop</title>
-    <script src="https://kit.fontawesome.com/eea93aed3e.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/eea93aed3e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
+  <body>
     <!-- ==================HEADER&NAV======================= -->
     <header class="header">
-        <div class="container split">
-            <a href="index.html">
-                <img src="images/logo.png" alt="Logo" class="logo">
-            </a>
+      <div class="container split">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Logo" class="logo" />
+        </a>
 
-            <nav id="nav" class="nav">
-                <ul class="nav-list row">
-                    <li class="nav-link"><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li class="nav-link dropdown"><a><i class="fa-solid fa-chevron-down"></i> Menu</a>
-                    <ul class="dropdown-content">
-                        <li class="nav-link"><a href="coffee-selection.html">Coffee Selection</a></li>
-                        <li class="nav-link"><a href="brewing-equipment.html">Brewing Equipment</a></li>
-                    </ul></li>
-                    
-                    <li class="nav-link"><a href="events-workshops.html"><i class="fa-solid fa-calendar"></i> Events & Workshops</a></li>
-                    <li class="nav-link"><a href="contact us.html"><i class="fa-solid fa-phone"></i> Contact us</a></li>
-                    <li class="nav-link"><a href="special-offers.html"><i class="fa-solid fa-gift"></i> Special Offers</a></li>
-                </ul>
-            </nav>
+        <nav id="nav" class="nav">
+          <ul class="nav-list row">
+            <li class="nav-link">
+              <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            </li>
+            <li class="nav-link dropdown">
+              <a><i class="fa-solid fa-chevron-down"></i> Menu</a>
+              <ul class="dropdown-content">
+                <li class="nav-link">
+                  <a href="coffee-selection.html">Coffee Selection</a>
+                </li>
+                <li class="nav-link">
+                  <a href="brewing-equipment.html">Brewing Equipment</a>
+                </li>
+              </ul>
+            </li>
 
-            <div class="header-icons">
-                <i id="search-btn" class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                <i id="cart-shopping" class="fa-regular fa-cart-shopping"></i>
-                <i id="open-btn" class="fa-solid fa-bars"></i>
-            </div>
-            
-         
-                <label class="search_inp">
-                    <input type="search" class="search_bar" placeholder="Search...">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </label>
+            <li class="nav-link">
+              <a href="events-workshops.html"
+                ><i class="fa-solid fa-calendar"></i> Events & Workshops</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="contact us.html"
+                ><i class="fa-solid fa-phone"></i> Contact us</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="special-offers.html"
+                ><i class="fa-solid fa-gift"></i> Special Offers</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-                <div class="shopping-cart">
-                    <div class="items">
-                      <h2>You haven't added any item</h2>
-                    </div>
-                    <p>Total: $<span id="cost"></span></p>
-                    <button class="btn check-items">Checkout Now</button>
-                  </div>
-   
+        <div class="header-icons">
+          <i id="account" class="fa-solid fa-user dropdown"
+            ><ul class="dropdown-content dropdown-content-account">
+              <li class="nav-link">
+                <a onclick="openUser('login')">Log In</a>
+              </li>
+              <li class="nav-link">
+                <a onclick="openUser('signup')">Sign Up</a>
+              </li>
+            </ul></i
+          >
+
+          <i id="cart-shopping" class="fa-regular fa-cart-shopping"></i>
+          <i id="open-btn" class="fa-solid fa-bars"></i>
         </div>
+
+        <div class="shopping-cart">
+          <div class="items">
+            <h2>You haven't added any item</h2>
+          </div>
+          <div class="shop-cost">Total: $<span id="cost"></span></div>
+          <button class="btn check-items">Checkout Now</button>
+        </div>
+      </div>
     </header>
-
-
-
-
-
-
 
     <!-- ==================MAIN======================= -->
 
     <!-- ==================ABOUT SECTION======================= -->
 
-
     <!-- ==================OUR MENU SECTION======================= -->
-    
-    
+
     <!-- ==================CUSTOMER'S REVIEW SECTION======================= -->
-    
 
     <!-- ==================CONTACT US SECTİON======================= -->
     <section class="section contact" id="contact">
-        <div class="container">
-            <h1 class="sect-head text-center">
-                contact <span>us</span>
-            </h1>
+      <div class="container">
+        <h1 class="sect-head text-center">contact <span>us</span></h1>
 
-            <div class="row">
-                <div class="col-50 map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.784320675327!2d49.74663281525919!3d40.457910379360364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403085c24dee86ed%3A0xce04598206b5ba5b!2sAbsheron%2C%20H%C4%B1rdalan%2C%20Azerbaycan!5e0!3m2!1str!2s!4v1666954879692!5m2!1str!2s"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+        <div class="row">
+          <div class="col-50 map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.784320675327!2d49.74663281525919!3d40.457910379360364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403085c24dee86ed%3A0xce04598206b5ba5b!2sAbsheron%2C%20H%C4%B1rdalan%2C%20Azerbaycan!5e0!3m2!1str!2s!4v1666954879692!5m2!1str!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
 
-                <div class="col-48 contact-info">
-                    <h1 class="info-head text-center">get in touch</h1>
-                    <div class="info-inputs row">
-                        <label>
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" placeholder="name"
-                            name="name" class="name" required>
-                        </label>
-                        <label>
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" placeholder="email"
-                                   name="email" class="email" required>
-                        </label>
-                        <label>
-                            <i class="fa-solid fa-phone-flip"></i>
-                            <input type="number" placeholder="number"
-                                   name="number" class="number" required>
-                        </label>
-                        <button class="btn contact-btn">Contact Now</button>
-                    </div>
-                </div>
+          <div class="col-48 contact-info">
+            <h1 class="info-head text-center">get in touch</h1>
+            <div class="info-inputs row">
+              <label>
+                <i class="fa-solid fa-user"></i>
+                <input
+                  type="text"
+                  placeholder="name"
+                  name="name"
+                  class="name"
+                  required
+                />
+              </label>
+              <label>
+                <i class="fa-solid fa-envelope"></i>
+                <input
+                  type="email"
+                  placeholder="email"
+                  name="email"
+                  class="email"
+                  required
+                />
+              </label>
+              <label>
+                <i class="fa-solid fa-phone-flip"></i>
+                <input
+                  type="number"
+                  placeholder="number"
+                  name="number"
+                  class="number"
+                  required
+                />
+              </label>
+              <button class="btn contact-btn">Contact Now</button>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ==================OUR BLOGS======================= -->
-   
 
     <!-- ==================FOOTER======================= -->
     <footer class="footer">
-        <div class="container">
-            <div class="social-stickers">
-                <ul class="stickers">
-                    <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    </li>
-                </ul>
+      <div class="container">
+        <div class="social-stickers">
+          <ul class="stickers">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+          </ul>
         </div>
+        <p>&copy; 2025 Bean Boutique Cafe</p>
+      </div>
     </footer>
 
     <script src="app.js"></script>
-</body>
-
+    <script src="modal.js"></script>
+    <script src="contact.js"></script>
+  </body>
 </html>
